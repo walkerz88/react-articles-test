@@ -4,13 +4,17 @@ import { List } from 'antd';
 class CommentItem extends React.Component {
 
   render () {
+    const name = this.props.name;
+    const email = this.props.email;
+    const body = this.props.body;
+
     return (
       <List.Item>
         <List.Item.Meta
-          title={this.props.name}
-          description={this.props.email}
+          title={name}
+          description={email}
         />
-        {this.props.body}
+        {body}
       </List.Item>
     );
   }

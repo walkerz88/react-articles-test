@@ -17,6 +17,9 @@ class ArticleItem extends React.Component {
   }
 
   render () {
+    const title = this.props.title;
+    const userId = this.props.userId;
+
     return (
       <List.Item
         actions={[
@@ -37,8 +40,8 @@ class ArticleItem extends React.Component {
         ]}
       >
         <List.Item.Meta
-          title={<button className="title-link" onClick={e => this.handleTitleClick(e)}>{this.props.title}</button>}
-          description={`Author ID: ${this.props.userId}`}
+          title={<button className="title-link" onClick={e => this.handleTitleClick(e)}>{title}</button>}
+          description={`Author ID: ${userId}`}
         />
       </List.Item>
     );

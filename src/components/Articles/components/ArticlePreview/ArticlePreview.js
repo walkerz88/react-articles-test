@@ -14,24 +14,30 @@ class ArticlePreview extends React.Component {
   }
 
   render () {
+    const title = this.props.title;
+    const visible = this.props.visible;
+    const body = this.props.body; 
+    const comments = this.props.comments;
+    const commentsLoading = this.props.commentsLoading;
+
     return (
       <Modal
-        title={this.props.title}
-        visible={this.props.visible}
+        title={title}
+        visible={visible}
         onCancel={this.hidePreview}
         onOk={this.hidePreview}
         footer={null}
       >
-        <p>{this.props.body}</p>
-        {!this.props.commentsLoading ?
+        <p>{body}</p>
+        {!commentsLoading ?
           <>
             <Divider />
-            <h4>Comments {this.props.comments && this.props.comments.length > 1 && `(${this.props.comments.length})`}</h4>
+            <h4 className="bold">Comments {comments && comments.length > 1 && `(${comments.length})`}</h4>
           </> : null
         }
         <Comments
-          list={this.props.comments}
-          loading={this.props.commentsLoading}
+          list={comments}
+          loading={commentsLoading}
         />
       </Modal>
     );

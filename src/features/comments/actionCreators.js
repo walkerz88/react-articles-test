@@ -1,8 +1,8 @@
-import axios from 'axios';
+import API from '../../utils/API';
 
 export function fetchComments(postId) {
-  return function() {
-    return axios.get(`https://jsonplaceholder.typicode.com/comments?postId=${postId}`)
+  return () => {
+    return API.get(`comments?postId=${postId}`)
       .then(({ data }) => {
         return data;
     });

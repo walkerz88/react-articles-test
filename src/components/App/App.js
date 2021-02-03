@@ -32,7 +32,7 @@ class App extends React.Component {
             <Articles />
           </div>
         </Content>
-        <Footer style={styles.footer}>Walarticles ©2021</Footer>
+        <Footer style={styles.footer}>W.Articles ©2021</Footer>
       </Layout>
     );
   }

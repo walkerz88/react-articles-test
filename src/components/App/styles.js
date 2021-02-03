@@ -23,7 +23,8 @@ const styles = {
     padding: '16px'
   },
   footer: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 600
   }
 }
 

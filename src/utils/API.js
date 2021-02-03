@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default axios.create({
-  baseURL: "https://randomuser.me/api/",
-  responseType: "json"
+  baseURL: 'https://jsonplaceholder.typicode.com/',
+  responseType: 'json'
 });

@@ -38,6 +38,8 @@ class ArticlePreview extends React.Component {
   }
 
   render () {
+    const loading = this.props.loading;
+
     return (
       <Modal
         title="Edit article"
@@ -53,7 +55,7 @@ class ArticlePreview extends React.Component {
           <Button
             key="submit"
             type="primary"
-            loading={this.props.loading}
+            loading={loading}
             onClick={this.submitForm}
           >
             Submit
