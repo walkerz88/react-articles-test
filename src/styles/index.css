@@ -1,0 +1,17 @@
+.title-link {
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.5715;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s ease;
+}
+
+.title-link:hover,
+.title-link:active {
+  color: #1890ff;
+}
