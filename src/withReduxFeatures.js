@@ -1,7 +1,6 @@
 import {combineReducers, createStore, applyMiddleware, compose} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
-import {CounterReducer} from './features/counter';
 import {ArticlesReducer} from './features/articles';
 import withProvider from './withProvider';
 
@@ -10,7 +9,6 @@ import withProvider from './withProvider';
  * all features of the application
  */
 const rootReducer = combineReducers({
-  count: CounterReducer,
   articles: ArticlesReducer
 });
 
